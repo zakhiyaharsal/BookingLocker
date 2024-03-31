@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "1bf8a17e-1b37-4f18-aa38-8223c4012f79",
+		"name": "Bookinglocker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9027037"
+	},
+	"item": [
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Maxim\",\r\n    \"phoneNumber\": \"082167425567\",\r\n    \"idCard\": \"123ABC\",\r\n    \"email\": \"casper@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterLocker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"A1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/add/locker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"add",
+						"locker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookingLocker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"lockerNumber\": 1,\r\n    \"startDate\": \"2024-03-31\",\r\n    \"endDate\": \"2024-03-31\",\r\n    \"deposit\": 10000,\r\n    \"fine\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostPassLocker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"lockerNumber\": 1,\r\n    \"startDate\": \"2024-03-31\",\r\n    \"endDate\": \"2024-03-31\",\r\n    \"deposit\": 10000,\r\n    \"fine\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/locker/{lockerNumber}/{password}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locker",
+						"{lockerNumber}",
+						"{password}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
